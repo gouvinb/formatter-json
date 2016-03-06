@@ -14,6 +14,7 @@ module.exports = FormatterJson =
           title: 'Enable formatter for JSON language'
           type: 'boolean'
           default: true
+          description: 'Need restart Atom.'
         indentSize:
           title: 'Arguments passed to the formatter JSON language'
           type: 'integer'
@@ -25,11 +26,10 @@ module.exports = FormatterJson =
     {
       selector: '.source.json'
       getNewText: (text) ->
-        if atom.config.get 'formatter-json.json.enable'
-          return new Promise (resolve, reject) ->
-            try
-              toReturn = JSON.stringify(JSON.parse(text), null, atom.config.get 'formatter-json.json.indentSize');
-              resolve(toReturn)
-            catch e
-              atom.notifications.addWarning("An error is occured");
-    }
+        return new Promise (resolve, reject) ->
+          try
+            toReturn = JSON.stringify(JSON.parse(text), null, atom.config.get 'formatter-json.json.indentSize');
+            resolve(toReturn)
+          catch e
+            atom.notifications.addWarning("An error is occured");
+    } if atom.config.get 'formatter-json.json.enable'
