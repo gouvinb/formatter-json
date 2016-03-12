@@ -31,5 +31,5 @@ module.exports = FormatterJson =
             toReturn = JSON.stringify(JSON.parse(text), null, atom.config.get 'formatter-json.json.indentSize');
             resolve(toReturn)
           catch e
-            atom.notifications.addWarning("An error is occured");
+            atom.notifications.addError('formatter-json : error', {dismissable: true, detail: e});
     } if atom.config.get 'formatter-json.json.enable'
