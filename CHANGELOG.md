@@ -3,6 +3,12 @@
 ## TODO
 
 *   Optimize enabler
+*   Cursor position
+*   More optimization ?
+
+## 1.0.0 - Complete description
+
+*   Add description to package.json
 
 ## 1.0.0 - First Release
 
