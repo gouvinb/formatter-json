@@ -1,9 +1,13 @@
 {
   "name": "formatter-json",
   "main": "./lib/formatter-json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Formatter for JSON.",
-  "keywords": ["formatter", "json", "format"],
+  "keywords": [
+    "formatter",
+    "json",
+    "format"
+  ],
   "repository": "https://github.com/gouvinb/formatter-json",
   "license": "MIT",
   "engines": {
