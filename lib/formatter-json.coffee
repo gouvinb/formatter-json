@@ -20,7 +20,7 @@ module.exports = FormatterJson =
           type: 'integer'
           default: 2
           minimum: 0
-          description: 'Example : '
+          description: 'Example : 8'
 
   provideFormatter: ->
     {
